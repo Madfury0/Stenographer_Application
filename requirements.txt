@@ -1,0 +1,4 @@
+# System Requirements
+steghide         # For embedding/extracting files
+build-essential  # C/C++ compiler and tools (gcc, g++, make)
+cmake            # Build system generator

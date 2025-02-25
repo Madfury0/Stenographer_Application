@@ -1,9 +1,8 @@
-```markdown
-# Steganography File Embedding/Extraction Tool
+#Steganography File Embedding/Extraction Tool
 
 A command-line application to embed and extract files using `steghide`, implemented in C and C++. Securely hide files within cover files (e.g., images) and retrieve them using a password.
 
-## Table of Contents
+##Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
@@ -13,19 +12,19 @@ A command-line application to embed and extract files using `steghide`, implemen
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-## Features
+##Features
 - **Embed Files**: Hide a secret file within a cover file (e.g., JPEG, BMP).
 - **Extract Files**: Retrieve hidden files from steganographed files.
 - **Password Protection**: Securely handle passwords for embedding/extraction.
 - **Cross-Platform**: Works on Linux, macOS, and Windows (via WSL/Cygwin).
 
-## Prerequisites
+##Prerequisites
 - `steghide` installed ([Download](http://steghide.sourceforge.net/))
 - C/C++ Compiler (`gcc`/`g++` or `clang`)
 - `CMake` (≥ 3.10)
 - `make` or `ninja`
 
-### Install Dependencies
+###Install Dependencies
 **Linux (Ubuntu/Debian):**
 ```bash
 sudo apt update
@@ -45,9 +44,9 @@ brew install steghide cmake
 **Windows (WSL/Cygwin):**  
 Follow Linux instructions in WSL or install Cygwin with required packages.
 
-## Building the Application
+##Building the Application
 
-### Directory Structure
+###Directory Structure
 ```
 steg_app/
 ├── c_version/       # C implementation
@@ -55,7 +54,7 @@ steg_app/
 └── README.md
 ```
 
-### Build Instructions
+###Build Instructions
 
 **C Version:**
 ```bash
@@ -63,7 +62,7 @@ cd c_version
 mkdir build && cd build
 cmake ..             # Generate build files
 make                 # Compile the executable
-# Binary: ./steg_c
+#Binary: ./steg_c
 ```
 
 **C++ Version:**
@@ -72,13 +71,13 @@ cd cpp_version
 mkdir build && cd build
 cmake ..             # Generate build files
 make                 # Compile the executable
-# Binary: ./steg_cpp
+#Binary: ./steg_cpp
 ```
 
-## Usage
+##Usage
 Run the compiled executable and follow the menu prompts.
 
-### Example Workflow
+###Example Workflow
 1. **Embed a File**:
    ```
    $ ./steg_c
@@ -108,15 +107,14 @@ Run the compiled executable and follow the menu prompts.
    Extracted to retrieved_secret.txt
    ```
 
-## Notes
+##Notes
 - **Security**: Passwords are hidden during input but passed to `steghide` via command-line arguments (visible in process listings).
 - **File Types**: Works best with JPEG, BMP, AU, and WAV files (supported by `steghide`).
 - **File Paths**: Use absolute paths if files are not in the working directory.
 - **Debugging**: Compile with `-g` in `CMakeLists.txt` to enable debug symbols.
 
-## License
+##License
 MIT License. See [LICENSE](LICENSE) for details.
 
-## Acknowledgments
+##Acknowledgments
 - `steghide` for the underlying steganography implementation.
-```

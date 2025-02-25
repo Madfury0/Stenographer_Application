@@ -27,6 +27,7 @@ A command-line application to embed and extract files using `steghide`, implemen
 - `CMake` (≥ 3.10)
 - `make` or `ninja`
 
+## Installation 
 ### Install Dependencies
 
 **Linux (Ubuntu/Debian):**
